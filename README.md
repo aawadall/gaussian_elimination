@@ -14,7 +14,7 @@ _Source : https://en.wikipedia.org/wiki/Gaussian_elimination_
 ### Initialization 
 
 get dimensions of A
-
+<img src="https://render.githubusercontent.com/render/math?math=m,n \gets dim(\bold{A})">
 $$m,n \gets dim(\bold{A}) \\$$ 
 
 Copy A to A prime 
