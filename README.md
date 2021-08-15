@@ -1,5 +1,4 @@
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 
 # Gaussian Elimination
 Different implementations of the gaussian elimination method.
@@ -63,3 +62,5 @@ $$a^{'}_{i, j} \gets a^{'}_{i, j} - f a^{'}_{h, j}$$
 advance pivot row and column
 
 $$h \gets h +1, k \gets k +1$$ 
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_CHTML"></script>
