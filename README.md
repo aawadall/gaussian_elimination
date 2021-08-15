@@ -1,5 +1,5 @@
 
-![formula](https://render.githubusercontent.com/render/math?math=m,n \gets dim(\bold{A}))
+
 # Gaussian Elimination
 Different implementations of the gaussian elimination method.
 
@@ -11,8 +11,7 @@ _Source : https://en.wikipedia.org/wiki/Gaussian_elimination_
 ### Initialization 
 
 get dimensions of A
-
-$$m,n \gets dim(\bold{A}) \\$$ 
+![f1](https://quicklatex.com/cache3/4f/ql_722fd05313eb5c38f2d4d1e6e1f0424f_l3.png)
 
 Copy A to A prime 
 
