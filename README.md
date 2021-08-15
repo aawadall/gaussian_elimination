@@ -1,5 +1,5 @@
 
-
+![formula](https://render.githubusercontent.com/render/math?math=m,n \gets dim(\bold{A}))
 # Gaussian Elimination
 Different implementations of the gaussian elimination method.
 
