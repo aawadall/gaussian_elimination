@@ -1,7 +1,5 @@
-<script type="text/javascript" async
-
-src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 # Gaussian Elimination
 Different implementations of the gaussian elimination method.
@@ -14,7 +12,7 @@ _Source : https://en.wikipedia.org/wiki/Gaussian_elimination_
 ### Initialization 
 
 get dimensions of A
-<img src="https://render.githubusercontent.com/render/math?math=m,n \gets dim(\bold{A})">
+
 $$m,n \gets dim(\bold{A}) \\$$ 
 
 Copy A to A prime 
