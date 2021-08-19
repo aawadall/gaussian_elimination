@@ -1,10 +1,13 @@
-const ref = require("./gaussian_elimination").gaussianElimination;
+const GaussianElimination = require("./gaussian_elimination");
 
+console.log(GaussianElimination)
 let A = [
-    [2, 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]];
+    [2, 1, -1, 8], 
+    [-3, -1, 2, -11], 
+    [-2, 1, 2, -3]];
 
-    console.log(A.length);
+    
     console.log(A);
-    let A_prime = ref(A);
+    let A_prime =  GaussianElimination.gaussianElimination(A);
     console.log(A_prime);
 

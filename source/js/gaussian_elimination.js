@@ -2,40 +2,10 @@
  * Gaussian Elimination
  */ 
 
-const debug = true;
+const debug = false;
 class GaussianElimination {
 
-    // add weighted row to row i
-    addWeightedRow = (A, j, i, multiplier) => {
-        const m = A.length;
-        const n = A[0].length;
-        for (let k = 0; k < n; k++) {
-            A[i][k] += multiplier * A[j][k];
-        }
-        return A;
-    }
-
-    // swap rows
-    static swapRows(A, i, j) {
-        if(debug) {
-            console.log("swapRows(" + i + ", " + j + ")");
-            console.log("A => ");
-            console.log(A);
-        }
-        const m = A.length;
-        const n = A[0].length;
-        for (let k = 0; k < n; k++) {
-            const temp = A[i][k];
-            A[i][k] = A[j][k];
-            A[j][k] = temp;
-        }
-
-        if(debug) {
-            console.log("A => ");
-            console.log(A);
-        }
-        return A;
-    }
+    
 
     // Gaussian Elimination
     static gaussianElimination(A) {
@@ -87,3 +57,36 @@ class GaussianElimination {
 }
 
 module.exports = GaussianElimination;
+
+
+// add weighted row to row i
+function addWeightedRow(A, j, i, multiplier)  {
+    const m = A.length;
+    const n = A[0].length;
+    for (let k = 0; k < n; k++) {
+        A[i][k] += multiplier * A[j][k];
+    }
+    return A;
+}
+
+// swap rows
+function swapRows(A, i, j) {
+    if(debug) {
+        console.log("swapRows(" + i + ", " + j + ")");
+        console.log("A => ");
+        console.log(A);
+    }
+    const m = A.length;
+    const n = A[0].length;
+    for (let k = 0; k < n; k++) {
+        const temp = A[i][k];
+        A[i][k] = A[j][k];
+        A[j][k] = temp;
+    }
+
+    if(debug) {
+        console.log("A => ");
+        console.log(A);
+    }
+    return A;
+}
