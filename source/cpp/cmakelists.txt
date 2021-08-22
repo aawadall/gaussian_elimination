@@ -1,0 +1,8 @@
+# Used to generate makefile for the Gaussian Elimination Algorithm
+#
+cmake_minimum_required(VERSION 2.8.12)
+project(gauss_elimination)
+set(CMAKE_CXX_STANDARD 11)
+
+# Add source files 
+add_executable(gauss_elimination main.cpp Matrix.cpp GaussElimination.cpp)
