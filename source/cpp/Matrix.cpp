@@ -83,3 +83,12 @@ void Matrix::addWightedRow(int i, int j, double multiplier)
         this->set(j, k, this->get(j, k) + this->get(i, k) * multiplier);
     }
 }
+
+// Multiply row by a scalar
+void Matrix::multiplyRow(int row, double scalar)
+{
+    for (int i = 0; i < this->cols; i++)
+    {
+        this->set(row, i, this->get(row, i) * scalar);
+    }
+}

@@ -19,5 +19,6 @@ public:
     void print();
     void swapRows(int row1, int row2);
     void addWightedRow(int i, int j, double multiplier);
+    void multiplyRow(int row, double multiplier);
     Matrix operator=(Matrix &matrix);
 };

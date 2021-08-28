@@ -11,6 +11,10 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
+# Ignore exe
+*.exe
+*.pdb
+
 # C# files to ignore
 **/bin
 **/obj

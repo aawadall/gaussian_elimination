@@ -49,5 +49,11 @@ int main(int argc, char const *argv[])
     cout << "Solution Matrix B:" << endl;
     B.print();
 
+    // RREF
+    cout << "RREF..." << endl;
+    auto C = ReducedRowEchelonForm(A);
+    cout << "Solution Matrix C:" << endl;
+    C.print();
+
     return 0;
 }

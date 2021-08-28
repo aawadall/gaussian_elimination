@@ -4,3 +4,4 @@
 #endif
 
 Matrix GaussElimination(Matrix &A);
+Matrix ReducedRowEchelonForm(Matrix &A);

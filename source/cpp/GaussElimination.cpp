@@ -33,3 +33,35 @@ Matrix GaussElimination(Matrix &matrix)
     }
     return A;
 }
+
+// Reduced Row Echelon Form
+Matrix ReducedRowEchelonForm(Matrix &matrix)
+{
+
+    // Make Upper Triangular
+    auto A = GaussElimination(matrix);
+
+    // Make Lower Triangular
+    // iterate over pivots from 1 to n
+    for (int i = 1; i < A.getRows(); i++)
+    {
+        // zero above pivot
+        for (int j = 0; j < i; j++)
+        {
+            // find multiplier
+            double multiplier = -A.get(j, i) / A.get(i, i);
+            // add wighted rows
+            A.addWightedRow(i, j, multiplier);
+        }
+    }
+
+    // Make Diagonal 1
+    for (int i = 0; i < A.getRows(); i++)
+    {
+        // find multiplier
+        double multiplier = 1 / A.get(i, i);
+        // multiply row by multiplier
+        A.multiplyRow(i, multiplier);
+    }
+    return A;
+}
