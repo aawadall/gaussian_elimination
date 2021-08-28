@@ -51,6 +51,83 @@ void Matrix::print()
     }
 }
 
+// enhanced matrix render function
+void Matrix::render()
+{
+    // iterate over rows
+    for (int i = 0; i < this->rows; i++)
+    {
+        // if first row, print unicode character 25DC in yellow color
+        if (i == 0)
+        {
+            cout << "\033[1;33m"
+                 //<< "\u25DC"
+                 << "/"
+                 << "\033[0m";
+        }
+        // if last row, print unicode character 25DF in yellow color
+        else if (i == this->rows - 1)
+        {
+            cout << "\033[1;33m"
+                 //<< "\u25DF"
+                 << "\\"
+                 << "\033[0m";
+        }
+        // otherwise, just print yellow pipe
+        else
+        {
+            cout << "\033[1;33m"
+                 << "|"
+                 << "\033[0m";
+        }
+
+        // step one tab
+        cout << "\t";
+
+        // iterate over columns
+        for (int j = 0; j < this->cols; j++)
+        {
+            // if last column make color green
+            if (j == this->cols - 1)
+            {
+                cout << "\033[1;32m" << this->data[i * this->cols + j] << "\033[0m";
+            }
+            // else make color white
+            else
+            {
+                cout << "\033[1;37m" << this->data[i * this->cols + j] << "\033[0m";
+            }
+            // step one tab
+            cout << "\t";
+        }
+
+        // if first row, print unicode character 25DD in yellow color
+        if (i == 0)
+        {
+            cout << "\033[1;33m"
+                 //<< "\u25DD"
+                 << "\\"
+                 << "\033[0m";
+        }
+        // if last row, print unicode character 25DE in yellow color
+        else if (i == this->rows - 1)
+        {
+            cout << "\033[1;33m"
+                 //<< "\u25DE"
+                 << "/"
+                 << "\033[0m";
+        }
+        // otherwise, just print yellow pipe
+        else
+        {
+            cout << "\033[1;33m"
+                 << "|"
+                 << "\033[0m";
+        }
+        cout << endl;
+    }
+}
+
 // Copy assigment operator
 Matrix Matrix::operator=(Matrix &rhs)
 {

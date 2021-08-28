@@ -17,6 +17,7 @@ public:
     int getRows();
     int getCols();
     void print();
+    void render();
     void swapRows(int row1, int row2);
     void addWightedRow(int i, int j, double multiplier);
     void multiplyRow(int row, double multiplier);

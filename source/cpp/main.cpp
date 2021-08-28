@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 
     // Print the Test Matrix
     cout << "Test Matrix A:" << endl;
-    A.print();
+    A.render();
 
     // Gaussian Elimination
     cout << "Gaussian Elimination..." << endl;
@@ -47,13 +47,13 @@ int main(int argc, char const *argv[])
 
     // Print the Solution Matrix
     cout << "Solution Matrix B:" << endl;
-    B.print();
+    B.render();
 
     // RREF
     cout << "RREF..." << endl;
     auto C = ReducedRowEchelonForm(A);
     cout << "Solution Matrix C:" << endl;
-    C.print();
+    C.render();
 
     return 0;
 }
